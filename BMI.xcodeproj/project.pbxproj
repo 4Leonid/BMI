@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		6805FDAF29EB053200AACF2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805FDAE29EB053200AACF2A /* AppDelegate.swift */; };
 		6805FDB129EB053200AACF2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805FDB029EB053200AACF2A /* SceneDelegate.swift */; };
-		6805FDB329EB053200AACF2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805FDB229EB053200AACF2A /* ViewController.swift */; };
+		6805FDB329EB053200AACF2A /* BMIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6805FDB229EB053200AACF2A /* BMIViewController.swift */; };
 		6805FDB629EB053200AACF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6805FDB429EB053200AACF2A /* Main.storyboard */; };
 		6805FDB829EB053600AACF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6805FDB729EB053600AACF2A /* Assets.xcassets */; };
 		6805FDBB29EB053600AACF2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6805FDB929EB053600AACF2A /* LaunchScreen.storyboard */; };
+		6805FDC429EB05CF00AACF2A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6805FDC329EB05CF00AACF2A /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6805FDAB29EB053200AACF2A /* BMI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6805FDAE29EB053200AACF2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6805FDB029EB053200AACF2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6805FDB229EB053200AACF2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6805FDB229EB053200AACF2A /* BMIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIViewController.swift; sourceTree = "<group>"; };
 		6805FDB529EB053200AACF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6805FDB729EB053600AACF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6805FDBA29EB053600AACF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6805FDC429EB05CF00AACF2A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +60,7 @@
 			children = (
 				6805FDAE29EB053200AACF2A /* AppDelegate.swift */,
 				6805FDB029EB053200AACF2A /* SceneDelegate.swift */,
-				6805FDB229EB053200AACF2A /* ViewController.swift */,
+				6805FDB229EB053200AACF2A /* BMIViewController.swift */,
 				6805FDB429EB053200AACF2A /* Main.storyboard */,
 				6805FDB729EB053600AACF2A /* Assets.xcassets */,
 				6805FDB929EB053600AACF2A /* LaunchScreen.storyboard */,
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = BMI;
+			packageProductDependencies = (
+				6805FDC329EB05CF00AACF2A /* SnapKit */,
+			);
 			productName = BMI;
 			productReference = 6805FDAB29EB053200AACF2A /* BMI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 6805FDA229EB053200AACF2A;
+			packageReferences = (
+				6805FDC229EB05CF00AACF2A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 6805FDAC29EB053200AACF2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6805FDB329EB053200AACF2A /* ViewController.swift in Sources */,
+				6805FDB329EB053200AACF2A /* BMIViewController.swift in Sources */,
 				6805FDAF29EB053200AACF2A /* AppDelegate.swift in Sources */,
 				6805FDB129EB053200AACF2A /* SceneDelegate.swift in Sources */,
 			);
@@ -360,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6805FDC229EB05CF00AACF2A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6805FDC329EB05CF00AACF2A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6805FDC229EB05CF00AACF2A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6805FDA329EB053200AACF2A /* Project object */;
 }
