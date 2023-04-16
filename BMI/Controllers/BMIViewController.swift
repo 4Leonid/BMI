@@ -140,6 +140,11 @@ class BMIViewController: UIViewController {
     print(weight / pow(height, 2))
     
     let bmi = weight / pow(height, 2)
+    
+    let resultVC = ResultViewController()
+    resultVC.modalPresentationStyle = .fullScreen
+    resultVC.bmiValue = String(format: "%.2f", bmi)
+    present(resultVC, animated: true)
   }
 }
 

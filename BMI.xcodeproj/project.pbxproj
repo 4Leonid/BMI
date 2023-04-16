@@ -14,6 +14,7 @@
 		6805FDB829EB053600AACF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6805FDB729EB053600AACF2A /* Assets.xcassets */; };
 		6805FDBB29EB053600AACF2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6805FDB929EB053600AACF2A /* LaunchScreen.storyboard */; };
 		6805FDC429EB05CF00AACF2A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6805FDC329EB05CF00AACF2A /* SnapKit */; };
+		685CD6AF29EBD64500BE0BF8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CD6AE29EBD64500BE0BF8 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		6805FDB729EB053600AACF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6805FDBA29EB053600AACF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6805FDBC29EB053600AACF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		685CD6AE29EBD64500BE0BF8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +62,22 @@
 			children = (
 				6805FDAE29EB053200AACF2A /* AppDelegate.swift */,
 				6805FDB029EB053200AACF2A /* SceneDelegate.swift */,
-				6805FDB229EB053200AACF2A /* BMIViewController.swift */,
+				685CD6AD29EBD62400BE0BF8 /* Controllers */,
 				6805FDB429EB053200AACF2A /* Main.storyboard */,
 				6805FDB729EB053600AACF2A /* Assets.xcassets */,
 				6805FDB929EB053600AACF2A /* LaunchScreen.storyboard */,
 				6805FDBC29EB053600AACF2A /* Info.plist */,
 			);
 			path = BMI;
+			sourceTree = "<group>";
+		};
+		685CD6AD29EBD62400BE0BF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6805FDB229EB053200AACF2A /* BMIViewController.swift */,
+				685CD6AE29EBD64500BE0BF8 /* ResultViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 				6805FDB329EB053200AACF2A /* BMIViewController.swift in Sources */,
 				6805FDAF29EB053200AACF2A /* AppDelegate.swift in Sources */,
 				6805FDB129EB053200AACF2A /* SceneDelegate.swift in Sources */,
+				685CD6AF29EBD64500BE0BF8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
