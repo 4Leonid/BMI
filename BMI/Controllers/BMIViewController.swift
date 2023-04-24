@@ -117,6 +117,8 @@ class BMIViewController: UIViewController {
     element.addTarget(self, action: #selector(moveSlider), for: .valueChanged)
     return element
   }()
+  
+  var calculatorBrain = CalculatorBrain()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -136,14 +138,14 @@ class BMIViewController: UIViewController {
   @objc private func buttonPressed() {
     let height = firstSlider.value
     let weight = secondSlider.value
-    print(pow(height, 2))
-    print(weight / pow(height, 2))
     
-    let bmi = weight / pow(height, 2)
+    calculatorBrain.calculateBMI(height: height, weight: weight)
     
     let resultVC = ResultViewController()
     resultVC.modalPresentationStyle = .fullScreen
-    resultVC.bmiValue = String(format: "%.2f", bmi)
+    resultVC.bmiValue = calculatorBrain.getBMIValue()
+    resultVC.advice = calculatorBrain.getAdvice()
+    resultVC.color = calculatorBrain.getColor()
     present(resultVC, animated: true)
   }
 }

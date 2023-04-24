@@ -47,7 +47,6 @@ class ResultViewController: UIViewController {
     element.font = UIFont.systemFont(ofSize: 20, weight: .light)
     element.textColor = .white
     element.textAlignment = .center
-    element.isHidden = true
     return element
   }()
   
@@ -62,14 +61,16 @@ class ResultViewController: UIViewController {
     return element
   }()
   
-  var bmiValue = "0.0"
+  var bmiValue: String?
+  var advice: String?
+  var color: UIColor?
   
   //  MARK: - Override Methods
   override func viewDidLoad() {
     super.viewDidLoad()
     setView()
     setConstraints()
-    showInfo(bmiValue)
+    showInfo()
   }
   
   @objc func pushButton() {
@@ -79,12 +80,10 @@ class ResultViewController: UIViewController {
 
 //  MARK: -  Private Methods
 extension ResultViewController {
-  private func showInfo(_ info: String) {
-    infoLabel.text = info
-    guard let result = Int(info) else { return }
-    if result < 40 {
-      snackLabel.isHidden = false
-    }
+  private func showInfo() {
+    infoLabel.text = bmiValue
+    snackLabel.text = advice
+    view.backgroundColor = color
   }
   
   private func setView() {
@@ -108,8 +107,7 @@ extension ResultViewController {
     }
     
     reculculateButton.snp.makeConstraints { make in
-      make.leading.trailing.equalToSuperview().inset(20)
-      make.bottom.equalToSuperview().inset(40)
+      make.bottom.leading.trailing.equalToSuperview().inset(40)
       make.height.equalTo(61)
     }
   }
